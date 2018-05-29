@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+body {
+    --headline-size: 23px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1215px;
+}
+@media (max-width: 1255px) { /* con(1215) + spacing(20) x 2 */
+    .container {
+        width: calc(100% - 40px);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 950px) {
+    header .container {
+        background-position: 40vw !important;
+    }
+}
+@media (max-width: 600px) {
+    main .desc h2 {
+        text-align: center;
+    }
+    main .desc h2 a {
+        float: none;
+        display: block;
+    }
+    footer {
+        text-align: center;
+    }
+    footer .newsletter {
+        float: none !important;
+    }
+    footer .newsletter input[type=submit] {
+        width: 320px;
+        margin-left: 0 !important;
+        margin-top: 10px;
+    }
+    footer .SoMe {
+        float: none !important;
+        margin-top: 30px !important;
+    }
+}
+
+
+/* HEADER */
+header {
+    background-color: #e7e5e8;
+}
+header .container {
+    display: table;
+    background-image: url("/assets/images/image_big.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 400px;
+}
+header .content {
+    display: table-cell;
+    vertical-align: middle;
+}
+header h1 {
+    font-size: calc(var(--headline-size) + 5px);
+    font-weight: normal;
+}
+header p {
+    color: grey;
+}
+
+
+/* MAIN */
+main .desc {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+main .desc h2 {
+    font-size: var(--headline-size);
+    font-weight: normal;
+}
+
+main .desc a {
+    margin-top: 6px;
+    font-size: 12px;
+    color: green;
+    text-decoration: none;
+    float: right;
+}
+main .desc a:after {
+    content: ">";
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 130px;
+}
+footer .content span {
+    font-size: var(--headline-size);
+}
+footer .content p {
+    color: grey;
+}
+footer .newsletter {
+    float: left;
+    margin-top: 30px;
+}
+footer .newsletter input {
+    padding: 10px;
+    outline: 0;
+    border-radius: 3px;
+}
+footer .newsletter input[type=email] {
+    border: 1px solid #c0c0c0;
+    width: 300px;
+}
+footer .newsletter input[type=submit] {
+    border: 1px solid green;
+    background-color: green;
+    color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+footer .SoMe {
+    list-style-type: none;
+    float: right;
+    margin-top: 17px;
+}
+footer .SoMe li {
+    display: inline-block;
+    margin-left: 10px;
+}
+footer .SoMe a {
+    font-size: 0;
+}
+footer .SoMe a:before {
+    display: inline-block;
+    content: "";
+    width: 50px;
+    height: 50px;
+}
+footer .SoMe a[href^="https://pinterest.com"]:before {
+    background-image: url('/assets/images/Pinterest.svg');
+}
+footer .SoMe a[href^="https://facebook.com"]:before {
+    background-image: url('/assets/images/Facebook_Color.svg');
+}
+footer .SoMe a[href^="https://instagram.com"]:before {
+    background-image: url('/assets/images/Instagram_Color.svg');
+}
